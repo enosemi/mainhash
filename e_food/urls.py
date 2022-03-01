@@ -18,8 +18,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
-from django.views.static import serve
-from django.conf.urls import url
+
 
 admin.site.site_header = "E-Food Admin"
 admin.site.site_title = "E-Food"
