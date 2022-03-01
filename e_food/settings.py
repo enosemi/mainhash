@@ -126,7 +126,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static') # Automatically Created on Production
+STATIC_ROOT = os.path.join(BASE_DIR, 'main/static') # Automatically Created on Production
 django_heroku.settings(locals())
 
 MEDIA_URL = '/media/'
