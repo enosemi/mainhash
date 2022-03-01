@@ -31,8 +31,8 @@ urlpatterns = [
     
 ]
 
-if settings.LOCAL_SERVE_STATIC_FILES:
+if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
-if settings.LOCAL_SERVE_MEDIA_FILES:
+if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
