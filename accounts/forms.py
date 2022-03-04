@@ -2,6 +2,7 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
+
 class NewUSerForm(UserCreationForm):
     email = forms.EmailField(required=True)
     phone_number = forms.CharField(required=True)
@@ -10,9 +11,17 @@ class NewUSerForm(UserCreationForm):
 
     class Meta:
         model = User
-        fields = ("username", "email", "phone_number", "first_name", "last_name", "password1", "password2")
+        fields = (
+            "username",
+            "email",
+            "phone_number",
+            "first_name",
+            "last_name",
+            "password1",
+            "password2",
+        )
 
-    def save(self,commit=True):
+    def save(self, commit=True):
         user = super(NewUSerForm, self).save(commit=False)
         user.email = self.cleaned_data["email"]
         user.phone_number = self.cleaned_data["phone_number"]
